@@ -20,3 +20,36 @@ After start studying the frontend, I finally made my choice. I like create websi
 * JavaScript, Typescript
 * Git, GitHub
 * Figma, Adobe Photoshop
+
+## Code Example:
+```
+function group(array, keySelector, valueSelector) {
+  return array.reduce((map, item) => {
+    const keyS = keySelector(item);
+    const valueS = valueSelector(item);
+    if (!map.has(keyS)) map.set(keyS, []);
+    map.get(keyS).push(valueS);
+    return map;
+  }, new Map());
+}
+```
+
+## Experience:
+I have done several sites and pet projects.
+[A little game about a frog](https://rolling-scopes-school.github.io/grimpatron-JSFEPRESCHOOL2023Q2/random-game/)
+[Image gallery powered by Unsplash](https://rolling-scopes-school.github.io/grimpatron-JSFEPRESCHOOL2023Q2/image-gallery/)
+[Exercises for English according to the program of Dmitry Petrov](https://grimpatron.github.io/EnglishPoli/index.html)
+[Customs map for the game Escape from Tarkov](https://grimpatron.github.io/tarkov-map/map.html)
+
+## Education:
+I completed the course «[IT shatle](https://it-shatle.by/)» in 2021
+YouTube [Dmitry Lavrik](https://www.youtube.com/@dmitrylavrik) chanel
+YouTube [Bogdan Stashchuk](https://www.youtube.com/@Bogdan_Stashchuk) chanel
+RS Schools Course «[JavaScript/Front-end](https://rs.school/)» (in progress)
+
+## Achievement
+[![codewars](https://www.codewars.com/users/rsschool_b61151ae3acfe5a4/badges/large)](https://www.codewars.com/users/rsschool_b61151ae3acfe5a4)
+
+## Languages:
+Russian - native speaker.   
+English - Intermediate.
