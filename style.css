@@ -1,0 +1,79 @@
+.container {
+  border: 1px solid gray;
+}
+
+.header {
+  border: 1px solid gray;
+}
+
+.nav {
+  border: 1px solid gray;
+}
+.nav__list {
+  display: flex;}
+.nav__item {}
+.nav__link {}
+
+.main {
+  border: 1px solid gray;
+  display: flex;
+}
+
+.personal {
+  border: 1px solid gray;
+}
+
+.profile {
+  border: 1px solid gray;
+}
+
+.profile-photo {}
+.profile-photo__image {}
+.profile-introduce {}
+.profile-introduce__name {}
+.profile-introduce__profession {}
+
+
+.contacts {
+  border: 1px solid gray;
+}
+
+.myself {
+  border: 1px solid gray;
+}
+
+.languages {
+  border: 1px solid gray;
+}
+
+.professional {
+  border: 1px solid gray;
+}
+
+.skills {
+  border: 1px solid gray;
+}
+
+.education {
+  border: 1px solid gray;
+}
+
+.experience {
+  border: 1px solid gray;
+}
+
+.code {
+  border: 1px solid gray;
+}
+
+.footer {
+  border: 1px solid gray;
+}
+.additional {
+  border: 1px solid gray;
+}
+.additional__link {}
+.additional__image {}
+.additional__name {}
+.additional__development {}
+
