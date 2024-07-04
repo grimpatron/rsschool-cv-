@@ -1,36 +1,67 @@
 :root {
   --main-link: #3377aa;
+  --main-color: #824628;
   --main-color--hover: #be6428;
   --main-bg-color-first: #ccd;
   --main-bg-color-second: #889;
+  --social-phone: #00b561;
+  --social-linkedin: #0077b5;
+  --social-facebook: #4267B2;
+  --social-twitter: #1DA1F2;
+  --social-discord: #5865f2;
+  --social-telegram: #0088cc;
+  --social-github: #6e5494;
+  --social-gmail-1: #4caf50;
+  --social-gmail-2: #1e88e5;
+  --social-gmail-3: #e53935;
+  --social-gmail-4: #c62828;
+  --social-gmail-5: #fbc02d;
+  --linear-gradient: linear-gradient(45deg, #020024 0%, #090979 62.1%, #090979 67%, #ffffff 67.1%, #ffffff 72.1%, #070663 72.1%, #080873 77%, #ffffff 77.1%, #ffffff 82%, #070766 82.1%, #080873 87%, #ffffff 87.1%);
+  --linear-gradient2: linear-gradient(45deg, #020024 0%, #090979 62.1%, #090979 67%, #ffffff 67.1%, #ffffff 69%, rgba(9, 9, 121, 0.9) 69.1%, rgba(8, 8, 115, 0.8) 74%, #ffffff 74.1%, #ffffff 76%, rgba(9, 9, 121, 0.7) 76.1%, rgba(9, 9, 121, 0.6) 81%, #ffffff 81.1%, #ffffff 83%, rgba(8, 7, 106, 0.5) 83.1%, rgba(9, 9, 121, 0.4) 88%, #ffffff 88.1%);
+  --linear-gradient3: linear-gradient(45deg, #020222 0%, #1b1bbb 71%, #ffffff 71.1%, #ffffff 73%, #007536 73.1%, #007536 78%, #ffffff 78.1%, #ffffff 80%, #ff0000 80.1%, #ff0000 85%, #ffffff 85.1%, #ffffff 87%, #bf9d30 87.1%, #bf9d30 92%, #ffffff 92.1%, #ffffff 94%, #1b1bbb 94.1%);
+  --linear-gradient4: linear-gradient(45deg, #003377 0%, #3377aa 73%, rgba(51, 119, 170, 0.9) 78%, #ffffff 78.1%, #ffffff 80%, rgba(51, 119, 170, 0.8) 80.1%, rgba(51, 119, 170, 0.7) 85%, #ffffff 85.1%, #ffffff 87%, rgba(51, 119, 170, 0.6) 87.1%, rgba(51, 119, 170, 0.5) 92%, #ffffff 92.1%, #ffffff 94%, rgba(51, 119, 170, 0.4) 94.1%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-link);
+}
+a :hover {
+  color: var(--main-color--hover);
+}
+
+.chapter {
+  margin-bottom: 20px;
+}
+.chapter-header {
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #000;
+}
+.text {
+  padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .container {
   max-width: 960px;
   margin: 0 auto;
   color: #666;
+  font-family: sans-serif;
 }
-
 .header {
   background-color: #333;
   padding: 10px;
 }
-.chapter-header {
-  border-radius: 8px;
-  padding: 4px 12px;
-  margin-bottom: 20px;
-  color: #FFF;
-  background-color: #000;
-}
 
 
-/*** NAV ***/
-.nav {}
+
+/*** NAV START ***/
 .nav__list {
-  /* display: flex; */
   width: max-content;
   margin: 0 auto;
-  list-style: none;
 }
 .nav__item {
   display: inline-block;
@@ -39,13 +70,14 @@
 .nav__link {
   color: #fff;
   font-size: 14px;
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s all ease-in-out;
 }
 .nav__link:hover {
   color: var(--main-color--hover);
-  transition: 0.2s;
 }
+/*** NAV END ***/
 
 
 
@@ -58,10 +90,10 @@
 
 .personal {
   width: 44%;
+  padding-right: 2%;
   border-right: 3px solid transparent;
   border-image: linear-gradient(to top, white 5%, var(--main-bg-color-first) 15% 25%, var(--main-bg-color-second) 35% 45%, var(--main-bg-color-first) 55% 65%, white 75%);
   border-image-slice: 1;
-  padding-right: 2%;
 }
 
 .professional {
@@ -70,18 +102,18 @@
 
 
 
-/**** ***** PROFILE **** *****/
+/*** PROFILE START ***/
 .profile {
   padding: 0 15%;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
-.profile-photo {
+.profile__frame {
   position: relative;
   padding-top: 100%;
   margin-bottom: 25px;
   font-size: 0;
 }
-.profile-photo__image {
+.profile__photo {
   position: absolute;
   display: block;
   top: 0;
@@ -92,17 +124,17 @@
   border-radius: 50%;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
-.profile-introduce {
-  margin: 0 auto 35px;
+.profile__introduce-block {
+  margin: 0 auto;
   max-width: 200px;
 }
-.profile-introduce__name {
+.profile__introduce-name {
   font-size: 42px;
   text-transform: uppercase;
   text-align: right;
   color: #000;
 }
-.profile-introduce__name span {
+.profile__introduce-name span {
   display: inline-block;
   transform: translateX(36px);
   padding: 0 36px 0 12px;
@@ -110,18 +142,18 @@
   color: #fff;
   background-color: var(--main-link);
 }
-.profile-introduce__profession {
+.profile__introduce-profession {
   text-align: right;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
 }
+/*** PROFILE END ***/
 
 
-/***** ***** CONTACTS ***** *****/
+/*** CONTACTS START ***/
 .contacts__list {
   padding: 0 10px;
-  margin-bottom: 20px;
 }
 .contacts__link {
   display: flex;
@@ -129,8 +161,18 @@
   padding: 5px;
 }
 .contacts__link:hover .contacts__icon {
-  transition: 0.2s;
+  transition: 0.3s all ease-in-out;
 }
+.contacts__link:hover .contacts__icon--phone    { fill: var(--social-phone)     }
+.contacts__link:hover .contacts__icon--linkedin { fill: var(--social-linkedin)  }
+.contacts__link:hover .contacts__icon--github   { fill: var(--social-github)    }
+.contacts__link:hover .contacts__icon--telegram { fill: var(--social-discord)   }
+.contacts__link:hover .contacts__icon--discord  { fill: var(--social-discord)   }
+.contacts__link:hover .contacts__icon--gmail-1  { fill: var(--social-gmail-1)   }
+.contacts__link:hover .contacts__icon--gmail-2  { fill: var(--social-gmail-2)   }
+.contacts__link:hover .contacts__icon--gmail-3  { fill: var(--social-gmail-3)   }
+.contacts__link:hover .contacts__icon--gmail-4  { fill: var(--social-gmail-4)   }
+.contacts__link:hover .contacts__icon--gmail-5  { fill: var(--social-gmail-5)   }
 .contacts__icon {
   width: 24px;
   height: auto;
@@ -139,34 +181,54 @@
 .contacts__name {
   font-size: 18px;
 }
-/*  */
-.contacts {}
+/*** CONTACTS END ***/
 
 
 
-
-/***** ***** MYSELF ***** *****/
-.myself {}
-
+/*** MYSELF START ***/
+/*** MYSELF END ***/
 
 
-/***** ***** LANGUAGES ***** *****/
-.languages {}
+
+/*** LANGUAGES START ***/
 .languages__list {
   padding: 0 10px;
 }
+/*** LANGUAGES END ***/
 
 
 
-
-
-.skills {
-  border: 1px solid gray;
+/*** SKILLS START ***/
+.skills__list {
+  column-count: 2;
+  padding: 0 10px;
+  margin-bottom: 20px;
 }
-
-.education {
-  border: 1px solid gray;
+.skills__item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
+.skills__name {
+  font-size: 20px;
+}
+.skills__icon {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+/*** SKILLS END ***/
+
+
+
+/*** EDUCATION START ***/
+.education__list {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+/*** EDUCATION END ***/
+
+
 
 .experience {
   border: 1px solid gray;
