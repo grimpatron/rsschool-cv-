@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my CV</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -53,28 +54,145 @@
 
         <div class="contacts" id="contacts">
           <h2 class="chapter-header">Contacts</h2>
+          <ul class="list contacts__list">
+            <li class="contacts__item">
+              <div class="contacts__link">
+                <span class="contacts__name">Location: Minsk, Belarus</span>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+375291325406" target="_blank">
+                <span class="contacts__name">+375 (29) 132-54-06</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="https://linkedin.com/in/khilman-mikhail/" target="_blank">
+                <span class="contacts__name">Linkedin</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="https://hellhammer220bpm@gmail.com" target="_blank">
+                <span class="contacts__name">Gmail</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="https://github.com/grimpatron" target="_blank">
+                <span class="contacts__name">GitHub</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="https://t.me/MikhailKhilman" target="_blank">
+                <span class="contacts__name">Telegram</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="https://discordapp.com/users/432476671317245956/" target="_blank">
+                <span class="contacts__name">Discord</span>
+              </a>
+            </li>
+          </ul>
         </div>
+
         <div class="myself" id="myself">
           <h2 class="chapter-header">About Myself</h2>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
         </div>
+
         <div class="languages" id="languages">
           <h2 class="chapter-header">Languages</h2>
+          <ul class="list languages__list">
+            <li class="list-item"><b>Russian</b> - Native speaker.</li>
+            <li class="list-item"><b>Belarusian</b> - Native speaker.</li>
+            <li class="list-item"><b>English</b> - Intermediate.</li>
+          </ul>
         </div>
       </div>
+
 
 
       <div class="professional">
         <div class="skills" id="skills">
           <h2 class="chapter-header">Skills</h2>
+          <ul class="list skills__list">
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="html icon">
+              <span class="skills__name">HTML (pug)</span>
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="css icon">
+              <span class="skills__name">CSS (less, sass)</span>
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="javascript icon">
+              <span class="skills__name">JS</span>
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="git icon">
+              <span class="skills__name">Git</span>
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="figma icon">
+              <span class="skills__name">Figma</span>
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="" alt="photoshop icon">
+              <span class="skills__name">Photoshop</span>
+            </li>
+          </ul>
         </div>
+
         <div class="education" id="education">
           <h2 class="chapter-header">Education</h2>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
+          <p class="myself__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum maxime illo sint eveniet voluptas incidunt quos. Numquam, unde? Ex illum optio soluta iure totam, voluptates esse. Ratione, error ab.</p>
         </div>
+        
         <div class="experience" id="experience">
           <h2 class="chapter-header">Experience</h2>
+          <div class="portfolio">
+            <div class="portfolio__item">
+                <div class="portfolio-item__title">Site name</div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio-item__title">Site name</div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio-item__title">Site name</div>
+            </div>
+            <div class="portfolio__item">
+                <div class="portfolio-item__title">Site name</div>
+            </div>
+          </div>
         </div>
+
         <div class="code" id="code">
           <h2 class="chapter-header">Code Example</h2>
+          <code>
+            function stackingCount(stackCount, cargoHeight, stackHeight){
+
+              if (stackCount != "") return stackCount;
+            
+              if (stackCount == "") {
+            
+                let stackHeight = Number(cargoHeight);
+            
+                let counter = 0;
+            
+                for( ; stackHeight < stackHeight; counter++ ){
+            
+                  stackHeight += Number(cargoHeight);
+            
+                }
+            
+                return counter;
+            
+              } else return 1;
+            
+            }
+          </code>
         </div>
       </div>
     </main>
