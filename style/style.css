@@ -4,6 +4,7 @@
   --main-color--hover: #be6428;
   --main-bg-color-first: #ccd;
   --main-bg-color-second: #889;
+  --main-bg-block: #334;
   --social-phone: #00b561;
   --social-linkedin: #0077b5;
   --social-facebook: #4267B2;
@@ -16,10 +17,7 @@
   --social-gmail-3: #e53935;
   --social-gmail-4: #c62828;
   --social-gmail-5: #fbc02d;
-  --linear-gradient: linear-gradient(45deg, #020024 0%, #090979 62.1%, #090979 67%, #ffffff 67.1%, #ffffff 72.1%, #070663 72.1%, #080873 77%, #ffffff 77.1%, #ffffff 82%, #070766 82.1%, #080873 87%, #ffffff 87.1%);
-  --linear-gradient2: linear-gradient(45deg, #020024 0%, #090979 62.1%, #090979 67%, #ffffff 67.1%, #ffffff 69%, rgba(9, 9, 121, 0.9) 69.1%, rgba(8, 8, 115, 0.8) 74%, #ffffff 74.1%, #ffffff 76%, rgba(9, 9, 121, 0.7) 76.1%, rgba(9, 9, 121, 0.6) 81%, #ffffff 81.1%, #ffffff 83%, rgba(8, 7, 106, 0.5) 83.1%, rgba(9, 9, 121, 0.4) 88%, #ffffff 88.1%);
-  --linear-gradient3: linear-gradient(45deg, #020222 0%, #1b1bbb 71%, #ffffff 71.1%, #ffffff 73%, #007536 73.1%, #007536 78%, #ffffff 78.1%, #ffffff 80%, #ff0000 80.1%, #ff0000 85%, #ffffff 85.1%, #ffffff 87%, #bf9d30 87.1%, #bf9d30 92%, #ffffff 92.1%, #ffffff 94%, #1b1bbb 94.1%);
-  --linear-gradient4: linear-gradient(45deg, #003377 0%, #3377aa 73%, rgba(51, 119, 170, 0.9) 78%, #ffffff 78.1%, #ffffff 80%, rgba(51, 119, 170, 0.8) 80.1%, rgba(51, 119, 170, 0.7) 85%, #ffffff 85.1%, #ffffff 87%, rgba(51, 119, 170, 0.6) 87.1%, rgba(51, 119, 170, 0.5) 92%, #ffffff 92.1%, #ffffff 94%, rgba(51, 119, 170, 0.4) 94.1%);
+  --linear-gradient: linear-gradient(45deg, #004488 0%, #3377aa 73%, rgba(51, 119, 170, 0.9) 78%, #ffffff 78.1%, #ffffff 80%, rgba(51, 119, 170, 0.8) 80.1%, rgba(51, 119, 170, 0.7) 85%, #ffffff 85.1%, #ffffff 87%, rgba(51, 119, 170, 0.6) 87.1%, rgba(51, 119, 170, 0.5) 92%, #ffffff 92.1%, #ffffff 94%, rgba(51, 119, 170, 0.4) 94.1%);
 }
 
 a {
@@ -38,7 +36,7 @@ a :hover {
   border-radius: 8px;
   padding: 4px 12px;
   margin-bottom: 20px;
-  background: var(--linear-gradient4);
+  background: var(--linear-gradient);
   color: #FFF;
 }
 .text {
@@ -55,10 +53,15 @@ a :hover {
   color: #666;
   font-family: sans-serif;
 }
+
+
+
+/*** HEADER START ***/
 .header {
-  background-color: #333;
+  background-color: var(--main-bg-block);
   padding: 10px;
 }
+/*** HEADER END ***/
 
 
 
@@ -91,7 +94,6 @@ a :hover {
   display: flex;
   justify-content: space-between;
 }
-
 .personal {
   width: 44%;
   padding-right: 2%;
@@ -99,7 +101,6 @@ a :hover {
   border-image: linear-gradient(to top, #fff 5%, var(--main-bg-color-first) 15% 25%, var(--main-bg-color-second) 35% 45%, var(--main-bg-color-first) 50% 75%, #fff 95%);
   border-image-slice: 1;
 }
-
 .professional {
   width: 54%;
 }
@@ -272,6 +273,8 @@ a :hover {
   padding: 10px;
   margin-bottom: 20px;
   background-color: #252525;
+  font-size: 16px;
+  line-height: 20px;
 }
 .codewars__image {
   margin: 0 auto;
@@ -282,7 +285,7 @@ a :hover {
 
 /*** FOOTER START ***/
 .additional {
-  background-color: #333;
+  background-color: var(--main-bg-block);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -313,3 +316,88 @@ a :hover {
   transition: 0.2s;
 }
 /*** FOOTER END ***/
+
+
+
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 0 4%;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .personal {
+    width: 100%;
+    padding-right: 0px;
+    border-right: none;
+  }
+  .professional {
+    width: 100%;
+  }
+  .nav {
+    display: none;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .profile__frame {
+    width: 35%;
+    padding-top: 35%;
+    margin-bottom: 0;
+  }
+  .profile__introduce {
+    margin-bottom: 0;
+  }
+  .code__container {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 440px) {
+  .text {
+    padding: 0;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .list {
+    padding: 0;
+  }
+  .chapter-header {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .profile {
+    padding: 0;
+  }
+  .profile__introduce-block {
+    max-width: 176px;
+  }
+  .profile__introduce-name {
+    font-size: 32px;
+  }
+  .profile__introduce-name span {
+    transform: translateX(0);
+    padding: 0 12px 0 24px;
+  }
+  .skills__list {
+    column-count: 1;
+  }
+  .portfolio {
+    margin-bottom: 20px;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .portfolio__item {
+    flex: 0 0 90%;
+  }
+  .additional {
+    flex-direction: column;
+  }
+  .code__container {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
