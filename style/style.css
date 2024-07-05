@@ -25,6 +25,7 @@
 a {
   text-decoration: none;
   color: var(--main-link);
+  transition: .3s all ease-in-out;
 }
 a :hover {
   color: var(--main-color--hover);
@@ -37,14 +38,17 @@ a :hover {
   border-radius: 8px;
   padding: 4px 12px;
   margin-bottom: 20px;
-  color: #fff;
-  background-color: #000;
+  background: var(--linear-gradient4);
+  color: #FFF;
 }
 .text {
   padding: 0 10px;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
-
+.list {
+  line-height: 1.4;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -92,7 +96,7 @@ a :hover {
   width: 44%;
   padding-right: 2%;
   border-right: 3px solid transparent;
-  border-image: linear-gradient(to top, white 5%, var(--main-bg-color-first) 15% 25%, var(--main-bg-color-second) 35% 45%, var(--main-bg-color-first) 55% 65%, white 75%);
+  border-image: linear-gradient(to top, #fff 5%, var(--main-bg-color-first) 15% 25%, var(--main-bg-color-second) 35% 45%, var(--main-bg-color-first) 50% 75%, #fff 95%);
   border-image-slice: 1;
 }
 
@@ -111,7 +115,7 @@ a :hover {
   position: relative;
   padding-top: 100%;
   margin-bottom: 25px;
-  font-size: 0;
+  /* font-size: 0; */
 }
 .profile__photo {
   position: absolute;
@@ -202,7 +206,7 @@ a :hover {
 .skills__list {
   column-count: 2;
   padding: 0 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .skills__item {
   margin-bottom: 10px;
@@ -213,8 +217,8 @@ a :hover {
   font-size: 20px;
 }
 .skills__icon {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   margin-right: 10px;
 }
 /*** SKILLS END ***/
@@ -230,26 +234,53 @@ a :hover {
 
 
 
-.experience {
-  border: 1px solid gray;
+/*** PORTFOLIO START ***/
+.portfolio {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-
-.code {
-  border: 1px solid gray;
+.portfolio__item {
+  flex: 0 0 47%;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all ease 0.4s;
+  color: #333;
+  text-align: center;
 }
+.portfolio__item:hover,
+.portfolio__item:focus {
+  transition: all ease 0.4s;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  color: #000;
+}
+.portfolio .portfolio__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*** PORTFOLIO END ***/
 
 
 
+/*** CODE START ***/
+.code__container {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #252525;
+}
+.codewars__image {
+  margin: 0 auto;
+}
+/*** CODE END ***/
 
-/***** ***** FOOTER ***** *****/
-.footer {}
-.footer__link {}
-.footer__name:hover {}
-.footer__image {}
-.footer__name,
-.footer__info {}
-/*  */
-.footer {}
+
+
+/*** FOOTER START ***/
 .additional {
   background-color: #333;
   padding: 10px 20px;
@@ -270,14 +301,15 @@ a :hover {
   fill: #fff;
 }
 .additional__name {
-  color: white;
+  color: #fff;
   font-size: 18px;
 }
 .additional__development {
-  color: white;
+  color: #fff;
   font-size: 18px;
 }
 .footer__name:hover {
   color: var(--main-color--hover);
   transition: 0.2s;
 }
+/*** FOOTER END ***/
